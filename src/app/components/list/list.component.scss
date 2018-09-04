@@ -1,0 +1,10 @@
+$bgcTh: #CCE5FF;
+
+table thead tr th {
+    background-color: $bgcTh;
+}
+
+.disabled {
+    color: gray;
+    cursor: not-allowed;
+}
