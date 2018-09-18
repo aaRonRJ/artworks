@@ -83,11 +83,11 @@ export class ListComponent implements OnInit {
       content = content.toUpperCase();
 
       this.artworksList = this.artworksList.filter((artwork: any) => {  
-        if (artwork.title.toUpperCase().includes(content) ||
-        artwork.principalOrFirstMaker.toUpperCase().includes(content) ||
+        if (artwork.title.toString().toUpperCase().includes(content) ||
+        artwork.principalOrFirstMaker.toString().toUpperCase().includes(content) ||
         artwork.year.toString().toUpperCase().includes(content) ||
-        artwork.objectTypes.toUpperCase().includes(content) ||
-        artwork.matTech.toUpperCase().includes(content)) {
+        artwork.objectTypes.toString().toUpperCase().includes(content) ||
+        artwork.matTech.toString().toUpperCase().includes(content)) {
           return artwork;
         }
       });
