@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AtworksService } from '../../services/atworks.service';
 import { Router } from '@angular/router';
 
+import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
+
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -42,7 +44,7 @@ export class ListComponent implements OnInit {
   page = 1;
 
   constructor(private _artWorkService: AtworksService,
-              private _route: Router) {}
+              private _spinnerService: Ng4LoadingSpinnerService) {}
 
   ngOnInit() {
     this.getCollection(this.page);
@@ -50,8 +52,8 @@ export class ListComponent implements OnInit {
 
   getCollection(page: number) {
     this.artworksList = [];
-
     this.page = page;
+    this._spinnerService.show();
 
     this._artWorkService.getCollection(page)
     .subscribe((data) => {      
@@ -59,11 +61,13 @@ export class ListComponent implements OnInit {
         this._artWorkService.getDetailArtwork(artObject.objectNumber)
         .then((detail: any) => {
           artObject.objectTypes = detail.objectTypes;
-          artObject.matTech = detail.matTech;
+          artObject.matTech = detail.matTech.length > 40 ? `${detail.matTech.substring(0, 40)}...` : detail.matTech;
           artObject.year = detail.dating.sortingDate;
 
           this.artworksList.push(artObject);
         });
+
+        this._spinnerService.hide();
       });
     });
   }
@@ -105,7 +109,7 @@ export class ListComponent implements OnInit {
         if (a[field] > b[field]) return 1;
 
         return 0;
-      });
+      });      
     }
     
     this.tableHeader[index].sortable = !this.tableHeader[index].sortable;

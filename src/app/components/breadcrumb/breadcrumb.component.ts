@@ -6,17 +6,11 @@ import { Router } from '@angular/router';
   templateUrl: './breadcrumb.component.html',
   styleUrls: ['./breadcrumb.component.scss']
 })
-export class BreadcrumbComponent implements OnInit {
+export class BreadcrumbComponent {
 
-  constructor(private route: Router) { 
-    console.log(this.route.url);
-  }
-
-  ngOnInit() {
-  }
+  constructor(private route: Router) {}
 
   getCurrentUrl() {
-    console.log(this.route.url);
     return this.route.url;
   }
 }

@@ -2,4 +2,80 @@
   <app-breadcrumb></app-breadcrumb>
 </div>
 
-<h1>{{ id }}</h1>
+<div class="detail" *ngIf="artwork">
+  <div class="image">
+    <img [src]="artwork.image" [alt]="artwork.title">
+  </div>
+  <div class="artwork-content">
+    <p class="title">
+      {{ artwork.title }}
+    </p>
+    <p class="author">
+      {{ artwork.author }}
+    </p>
+    <p class="description-author">
+      {{ artwork.description }}
+    </p>
+
+    <div class="line"></div>
+
+    <div class="specifications">
+      <div class="specifications__title">
+        <p>
+          Identificación
+        </p>
+      </div>
+      <div class="specifications__subtitle">
+        <p>Título</p>
+        <p>Tipo de obra</p>
+        <p>Número de obra</p>
+        <p>Inscripciones/marcas</p>
+        <p>Descripción</p>
+      </div>
+      <div class="specifications__content">
+        <p>{{ artwork.title }}</p>
+        <p>{{ artwork.type }}</p>
+        <p>{{ artwork.objectNumber }}</p>
+        <p>{{ artwork.inscriptions }}</p>
+        <p>{{ artwork.plaqueDescriptionEnglish }}</p>
+      </div>
+    </div>
+
+    <div class="line-secondary"></div>
+
+    <div class="specifications">
+      <div class="specifications__title">
+        <p>
+          Creación
+        </p>
+      </div>
+      <div class="specifications__subtitle">
+        <p>Artista</p>
+        <p>Lugar</p>
+        <p>Fecha</p>
+      </div>
+      <div class="specifications__content">
+        <p>{{ artwork.artist }}</p>
+        <p>{{ artwork.place }}</p>
+        <p>{{ artwork.date }}</p>
+      </div>
+    </div>
+
+    <div class="line-secondary"></div>
+
+    <div class="specifications mb-5">
+      <div class="specifications__title">
+        <p>
+          Material y técnica
+        </p>
+      </div>
+      <div class="specifications__subtitle">
+        <p>Material</p>
+        <p>Medidas</p>
+      </div>
+      <div class="specifications__content">
+        <p>{{ artwork.materials }}</p>
+        <p>{{ artwork.dimensions }}</p>
+      </div>
+    </div>
+</div>

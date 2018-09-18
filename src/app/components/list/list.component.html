@@ -8,7 +8,7 @@
   Obras
 </p>
 
-<table class="table mt-2">
+<table class="table mt-2" *ngIf="artworksList.length > 0">
   <thead>
     <tr>
       <th *ngFor="let header of tableHeader; index as i" class="text-highlighted"
@@ -34,4 +34,4 @@
 </table>
 
 <app-pagination (changeCurrentPage)="changePage($event)" [currentPage]="page"
-*ngIf="artworksList.length >= 10"></app-pagination>
+*ngIf="artworksList.length >= 10 && !showSpinner"></app-pagination>

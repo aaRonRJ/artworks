@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 
 // Routes
 import { ROUTES } from './app.routes';
@@ -30,7 +31,8 @@ import { SearchComponent } from './components/search/search.component';
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    Ng4LoadingSpinnerModule.forRoot()
   ],
   providers: [AtworksService],
   bootstrap: [AppComponent]
