@@ -80,11 +80,14 @@ export class ListComponent implements OnInit {
   searchByContent(content: string) {
     if (content.replace(/ /g,'').length > 0) {
       this.auxArtworksList = this.artworksList;
+      content = content.toUpperCase();
 
       this.artworksList = this.artworksList.filter((artwork: any) => {  
-        if (artwork.title.includes(content) || artwork.principalOrFirstMaker.includes(content) ||
-        artwork.year.toString().includes(content) ||
-        artwork.objectTypes.includes(content) || artwork.matTech.includes(content)) {
+        if (artwork.title.toUpperCase().includes(content) ||
+        artwork.principalOrFirstMaker.toUpperCase().includes(content) ||
+        artwork.year.toString().toUpperCase().includes(content) ||
+        artwork.objectTypes.toUpperCase().includes(content) ||
+        artwork.matTech.toUpperCase().includes(content)) {
           return artwork;
         }
       });
