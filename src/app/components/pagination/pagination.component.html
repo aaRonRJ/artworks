@@ -1,0 +1,15 @@
+<div class="pagination">
+  <div class="pagination-buttons">
+    <button (click)="back(currentPage)" [ngClass]="{'disabled': currentPage === 1}">
+      <
+    </button>
+    <button *ngFor="let item of [1, 2, 3, 4, 5]"
+    (click)="changePage(item)"
+    [ngClass]="{ 'button-active': currentPage === item }">
+      {{ item }}
+    </button>  
+    <button (click)="next(currentPage)" [ngClass]="{'disabled': currentPage === 5}">
+      >
+    </button>
+  </div>
+</div>

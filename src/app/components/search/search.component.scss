@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.search {
+    margin-top: 20px;
+
+    button {        
+        border: 0;
+        height: 30px;
+        float: right;
+        cursor: pointer;
+    }
+
+    .button-search {
+        background-color: #3D70B2;
+        color: #ffffff;
+    }
+
+    .button-close {
+        color: #000000;
+        background-color: #ffffff;
+        margin-right: 10px;
+    }
+
+    input {
+        color: #152935;
+        font-family: 'Roboto';
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 24px;
+        border: 2px solid #ffffff;
+    }
+
+    input:focus, button:focus {
+        outline: 0;
+    }
+
+    .line-copy {
+        height: 1px;
+        width: 304px;
+        background-color: #3D70B2;
+    }
+}

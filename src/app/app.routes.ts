@@ -10,7 +10,7 @@ export const ROUTES: Routes = [
         component: ListComponent
     },
     {
-        path: 'artworkDetail/:work',
+        path: 'artworkDetail/:objectNumber',
         component: DetailComponent
     },
     {

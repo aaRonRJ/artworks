@@ -1,7 +1,54 @@
-$bgcTh: #CCE5FF;
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
-table thead tr th {
-    background-color: $bgcTh;
+p {
+    font-weight: 600;
+    color: black;
+}
+
+.text-highlighted {
+    color: #152935;	
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 15px;
+    height: 48px;
+    vertical-align: middle;
+}
+
+table {
+    thead {
+        background-color: #F4F7FB;
+        border: 1px solid #DFE3E6;
+
+        th {
+            cursor: pointer;
+
+            i {
+                margin-left: 10px;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    tbody {
+        background-color: #ffffff;
+        border: 1px solid #DFE3E6;
+    }
+
+    tbody tr td {
+        color: #152935;	
+        font-family: 'Roboto';
+        font-size: 14px;
+        line-height: 15px;
+        height: 48px;
+        vertical-align: middle;
+    }
+
+    tbody tr:hover {
+        border: 2px solid #5596E6;	
+        background-color: rgba(85,150,230,0.1);
+        cursor: pointer;
+    }
 }
 
 .disabled {

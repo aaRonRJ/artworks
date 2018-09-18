@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { AtworksService } from '../../services/atworks.service';
 
 @Component({
   selector: 'app-detail',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent implements OnInit {
+  id: string;
+  artwork: any;
 
-  constructor() { }
+  constructor(private _route: ActivatedRoute,
+              private _artWorks: AtworksService) {
+    this._route.params.subscribe((params: Params) => this.id = params['objectNumber']);
 
-  ngOnInit() {
+    this._artWorks.getArtwork(this.id)
+    .subscribe(data => {
+      this.artwork = data;
+    });
   }
 
+  ngOnInit() {}
 }

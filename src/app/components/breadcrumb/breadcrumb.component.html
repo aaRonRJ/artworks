@@ -1,0 +1,10 @@
+<p>
+  <span>Museo</span>
+  <span class="separator">/</span>
+  <span [ngClass]="{ 'route-selected': getCurrentUrl() === '/' }"
+  [routerLink]="['/']">Obras de arte</span>
+  <span class="separator">/</span>
+  <span *ngIf="getCurrentUrl().includes('artworkDetail')"
+  [ngClass]="{ 'route-selected': getCurrentUrl().includes('artworkDetail') }">Detalle de la obra</span>
+  <span *ngIf="getCurrentUrl().includes('artworkDetail')" class="separator">/</span>
+</p>

@@ -1,0 +1,11 @@
+<div class="search">
+  <input type="text" placeholder="Buscar" [(ngModel)]="contentToSearch"
+  (keydown)="searchKeydownEnter($event)">
+  <button class="button-search" (click)="search()">
+    <img src="../../../assets/img/search.svg" alt="search">
+  </button>
+  <button class="button-close" (click)="close()">
+    <img src="../../../assets/img/close.svg" alt="close">
+  </button>
+  <div class="line-copy"></div>
+</div>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>D1E1AD2B-0B78-4585-862D-8001D5487625</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M12.0907075,11.2860555 L15.8323976,15.0240943 C16.0556516,15.2471305 16.0558989,15.6089909 15.8329498,15.8323321 C15.6100007,16.0556734 15.2482816,16.0559207 15.0250276,15.8328845 L11.2828795,12.0943882 C10.0884143,13.1061529 8.54315203,13.7162539 6.85544867,13.7162539 C3.06928892,13.7162539 0,10.6457659 0,6.85812696 C0,3.07048803 3.06928892,0 6.85544867,0 C10.6416084,0 13.7108973,3.07048803 13.7108973,6.85812696 C13.7108973,8.54590951 13.1014536,10.0912932 12.0907075,11.2860555 Z M6.85544867,12.5732328 C10.0105818,12.5732328 12.5683226,10.0144927 12.5683226,6.85812696 C12.5683226,3.70176118 10.0105818,1.14302116 6.85544867,1.14302116 C3.70031554,1.14302116 1.14257478,3.70176118 1.14257478,6.85812696 C1.14257478,10.0144927 3.70031554,12.5732328 6.85544867,12.5732328 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01-Listado" transform="translate(-1174.000000, -88.000000)">
+            <g id="search_bar_active" transform="translate(860.000000, 80.000000)">
+                <g id="icon_search" transform="translate(306.000000, 0.000000)">
+                    <g id="ico-/-14-/-search" transform="translate(8.000000, 8.000000)">
+                        <rect id="Background" x="0" y="0" width="16" height="16"></rect>
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Oval-8" fill="#6E767D" fill-rule="nonzero" xlink:href="#path-1"></use>
+                        <g id="↳-🎨Color" mask="url(#mask-2)">
+                            <rect id="Background" x="0" y="0" width="16" height="16"></rect>
+                            <rect id="Rectangle-2" fill="#FFFFFF" x="0" y="0" width="16" height="16"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
