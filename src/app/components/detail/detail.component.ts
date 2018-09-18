@@ -17,7 +17,6 @@ export class DetailComponent implements OnInit {
 
     this._artWorks.getArtwork(this.id)
     .subscribe(data => {
-      console.log('Data', data);
       this.artwork = {};
       
       this.artwork.image = data.webImage.url;
@@ -54,9 +53,7 @@ export class DetailComponent implements OnInit {
         this.artwork.dimensions = `${data.dimensions[0].value} cm x ${data.dimensions[1].value} cm`;
       } else {
         this.artwork.dimensions = 'no dimensions';
-      }      
-
-      console.log(this.artwork);
+      }
     });
   }
 
